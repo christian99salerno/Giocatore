@@ -1,8 +1,9 @@
 from giocatore import Giocatore
 
-chris = Giocatore("chris", 100)
+chris = Giocatore("Christian", 100)
 
-while(chris.getLife>0):
+print "Il giocatore",chris.getName(),"ha",chris.getLife(),"PV"
+
+while(chris.getLife()>0):
     chris.danno_colpo()
-    print chris.getLife()
 

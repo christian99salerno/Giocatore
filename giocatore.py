@@ -17,7 +17,11 @@ class Giocatore:
         return self.name
     def danno_colpo(self):
         if self.life<=0:
-            return -1
+            print "ERRORE! il giocatore",self.getName(),"e' morto"
         else:
             self.p.spara() 
             self.life=self.life-10
+            print self.getLife()
+        if self.life<=0:
+            print "Il giocatore",self.getName(),"e' GAME OVER"
+
