@@ -1,4 +1,5 @@
 from pistola import Pistola
+import random
 
 
 class Giocatore:
@@ -15,13 +16,8 @@ class Giocatore:
         self.name=name
     def getName(self):
         return self.name
-    def danno_colpo(self):
-        if self.life<=0:
-            print "ERRORE! il giocatore",self.getName(),"e' morto"
-        else:
-            self.p.spara() 
-            self.life=self.life-10
-            print self.getLife()
-        if self.life<=0:
-            print "Il giocatore",self.getName(),"e' GAME OVER"
-
+    def danno_colpo(self,giocatore2):
+        self.p.spara() 
+        giocatore2.life=giocatore2.life-random.randrange(5,26)
+    def getMunizioni(self):
+        return self.p
