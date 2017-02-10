@@ -1,12 +1,12 @@
 from pistola import Pistola
 import random
-
+import curses
 
 class Giocatore:
     def __init__(self, name, life):
          self.name=name
          self.life=life
-         self.p=Pistola(10)
+         self.p=Pistola(5)
     
     def setLife(self, life):
         self.life=life
@@ -18,6 +18,6 @@ class Giocatore:
         return self.name
     def danno_colpo(self,giocatore2):
         self.p.spara() 
-        giocatore2.life=giocatore2.life-random.randrange(5,26)
+        giocatore2.life=giocatore2.life-random.randrange(5,41)
     def getMunizioni(self):
-        return self.p
+        return self.p.munizioni
