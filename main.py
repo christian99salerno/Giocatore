@@ -1,69 +1,11 @@
 from giocatore import Giocatore
 from pistola import Pistola
-import curses
-
-stdscr=curses.initscr()
-
-curses.curs_set(0)
 
 chris = Giocatore("Christian", 100)
 vinc = Giocatore("Vincenzo", 100)
 
-stdscr.addstr (0,0,"Il giocatore "+chris.getName()+" ha "+str(chris.getLife())+" PV")
-stdscr.addstr (0,40,"Il giocatore "+vinc.getName()+" ha "+str(vinc.getLife())+" PV")
-
-#Giocatore 1
-
-stdscr.addstr (2,5,"xxxx")
-stdscr.addstr (3,4,"x")
-stdscr.addstr (3,9,"x")
-stdscr.addstr (4,4,"x")
-stdscr.addstr (4,8,"xx")
-stdscr.addstr (5,4,"x")
-stdscr.addstr (5,9,"x")
-stdscr.addstr (6,5,"xxxx")
-stdscr.addstr (7,6,"x")
-stdscr.addstr (8,6,"x")
-stdscr.addstr (9,6,"x")
-stdscr.addstr (10,6,"x")
-stdscr.addstr (11,6,"x")
-stdscr.addstr (11,6,"xxxxxxx")
-stdscr.addstr (12,6,"x")
-stdscr.addstr (13,6,"x")
-stdscr.addstr (14,6,"x")
-stdscr.addstr (15,6,"x")
-stdscr.addstr (16,6,"x")
-stdscr.addstr (17,6,"xxxx")
-stdscr.addstr (10,11,"xxxx")
-stdscr.addstr (12,11,"x")
-
-#Giocatore 2
-
-stdscr.addstr (2,50,"xxxx")
-stdscr.addstr (3,49,"x")
-stdscr.addstr (3,54,"x")
-stdscr.addstr (4,49,"xx")
-stdscr.addstr (4,54,"x")
-stdscr.addstr (5,49,"x")
-stdscr.addstr (5,54,"x")
-stdscr.addstr (6,50,"xxxx")
-stdscr.addstr (7,52,"x")
-stdscr.addstr (8,52,"x")
-stdscr.addstr (9,52,"x")
-stdscr.addstr (10,52,"x")
-stdscr.addstr (11,52,"x")
-stdscr.addstr (11,45,"xxxxxxx")
-stdscr.addstr (12,52,"x")
-stdscr.addstr (13,52,"x")
-stdscr.addstr (14,52,"x")
-stdscr.addstr (15,52,"x")
-stdscr.addstr (16,52,"x")
-stdscr.addstr (17,49,"xxxx")
-stdscr.addstr (10,43,"xxxx")
-stdscr.addstr (12,46,"x")
-stdscr.refresh()
-stdscr.getch()
-curses.endwin()
+chris.disegno_giocatore("s")
+vinc.disegno_giocatore("d")
 
 #while chris.getLife() > 0 and chris.getMunizioni() > 0 or vinc.getLife() > 0 and vinc.getMunizioni() > 0:
    # chris.danno_colpo(vinc)
