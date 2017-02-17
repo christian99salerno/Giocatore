@@ -7,6 +7,8 @@ vinc = Giocatore("Vincenzo", 100)
 chris.disegno_giocatore("s")
 vinc.disegno_giocatore("d")
 
+vinc.proiettile("d")
+
 #while chris.getLife() > 0 and chris.getMunizioni() > 0 or vinc.getLife() > 0 and vinc.getMunizioni() > 0:
    # chris.danno_colpo(vinc)
     #print chris.getName(),"spara a",vinc.getName(),"PV=",vinc.getLife(),"e",chris.getName(),"ha munizioni=",chris.getMunizioni()

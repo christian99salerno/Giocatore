@@ -77,18 +77,21 @@ class Giocatore:
             stdscr.refresh()
         stdscr.getch()
         curses.endwin() 
-    def proiettile(self, lato)
+    def proiettile(self, lato):
         stdscr=curses.initscr()
 
         curses.curs_set(0)
 
         if lato=="s":
-            for i in range(13,52):
+            for i in range(15,52):
                stdscr.addstr (10,i,"-")
                stdscr.getch()
+               stdscr.refresh() 
         elif lato=="d":
-            for i in range(47, 
-           
-        
+            for i in range(47,6):
+                stdscr.addstr (10,i,"-")
+                stdscr.getch()
+                stdscr.refresh() 
+        curses.endwin()
 
  
