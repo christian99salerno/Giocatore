@@ -9,6 +9,8 @@ vinc.disegno_giocatore("d")
 
 vinc.proiettile("d")
 
+#versione 1:
+
 #while chris.getLife() > 0 and chris.getMunizioni() > 0 or vinc.getLife() > 0 and vinc.getMunizioni() > 0:
    # chris.danno_colpo(vinc)
     #print chris.getName(),"spara a",vinc.getName(),"PV=",vinc.getLife(),"e",chris.getName(),"ha munizioni=",chris.getMunizioni()

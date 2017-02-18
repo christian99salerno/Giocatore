@@ -27,7 +27,7 @@ class Giocatore:
         curses.curs_set(0)
 
         if lato=="s":
-            stdscr.addstr (0,0,"Il giocatore "+self.getName()+" ha "+str(self.getLife())+" PV")
+            stdscr.addstr (0,0,"Il giocatore "+self.getName()+" ha " +                  str(self.getLife())+" PV")
             stdscr.addstr (2,5,"xxxx")
             stdscr.addstr (3,4,"x")
             stdscr.addstr (3,9,"x")
@@ -50,8 +50,10 @@ class Giocatore:
             stdscr.addstr (17,6,"xxxx")
             stdscr.addstr (10,11,"xxxx")
             stdscr.addstr (12,11,"x")
+            stdscr.refresh()
+            stdscr.getch()
         elif lato=="d":
-            stdscr.addstr (0,40,"Il giocatore "+self.getName()+" ha "+str(self.getLife())+" PV")
+            stdscr.addstr (0,40,"Il giocatore "+self.getName()+" ha " +                 str(self.getLife())+" PV")
             stdscr.addstr (2,50,"xxxx")
 	    stdscr.addstr (3,49,"x")
 	    stdscr.addstr (3,54,"x")
@@ -75,8 +77,8 @@ class Giocatore:
             stdscr.addstr (10,43,"xxxx")
             stdscr.addstr (12,46,"x")
             stdscr.refresh()
-        stdscr.getch()
-        curses.endwin() 
+            stdscr.getch()
+            curses.endwin() 
     def proiettile(self, lato):
         stdscr=curses.initscr()
 
@@ -85,13 +87,13 @@ class Giocatore:
         if lato=="s":
             for i in range(15,52):
                stdscr.addstr (10,i,"-")
+               stdscr.refresh()
                stdscr.getch()
-               stdscr.refresh() 
         elif lato=="d":
             for i in range(47,6):
                 stdscr.addstr (10,i,"-")
-                stdscr.getch()
                 stdscr.refresh() 
-        curses.endwin()
+                stdscr.getch()
+            curses.endwin()
 
  
